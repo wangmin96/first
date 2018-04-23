@@ -9,7 +9,15 @@
 </template>
 <script>
   export default {
-    name:'CompTwo'
+    name:'CompTwo',
+    beforeRouteEnter:(to,from,next)=>{
+      console.log("进入comp2");
+      next()
+    },
+    beforeRouteLeave:(to,from,next)=>{
+      console.log("离开comp2");
+      next()
+    }
   }
 </script>
 <style scoped>
